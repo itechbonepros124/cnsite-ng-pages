@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>信息索引 · NG体育 — 资料整理与场景指引</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafafa;
+      color: #1e1e1e;
+      font-family: -apple-system, "PingFang SC", "Segoe UI", Roboto, system-ui, sans-serif;
+      line-height: 1.7;
+      padding: 2rem 1.2rem 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 768px;
+      width: 100%;
+    }
+
+    /* 顶部导航——极简文字链 */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0 1.2rem;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 2.8rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-brand {
+      font-weight: 500;
+      color: #0b0b0b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #555;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #181818;
+    }
+
+    /* hero 区 —— 窄幅、克制 */
+    .hero {
+      margin-bottom: 3.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+      font-weight: 540;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      color: #3d3d3d;
+      font-size: 1.05rem;
+      max-width: 600px;
+    }
+
+    /* 清晰标题层级 */
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 510;
+      margin: 2.8rem 0 0.25rem;
+      letter-spacing: -0.3px;
+      border-left: 4px solid #1e1e1e;
+      padding-left: 1rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 490;
+      margin: 1.6rem 0 0.4rem;
+    }
+
+    .sub-desc {
+      color: #444;
+      font-size: 0.95rem;
+      margin-bottom: 1.8rem;
+    }
+
+    /* 场景卡片 —— 三个模块 */
+    .scene-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin: 1.2rem 0 2rem;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border: 1px solid #ececec;
+      border-radius: 0;
+      padding: 1.4rem 1.6rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .scene-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8f8f8f;
+      margin-bottom: 0.2rem;
+    }
+
+    .scene-card .title {
+      font-size: 1.15rem;
+      font-weight: 490;
+      margin-bottom: 0.3rem;
+    }
+
+    .scene-card p {
+      font-size: 0.94rem;
+      color: #3b3b3b;
+    }
+
+    /* 常见说明 / FAQ 摘要 */
+    .faq-block {
+      margin: 3rem 0 2.2rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eaeaea;
+      padding: 1.1rem 0;
+    }
+
+    .faq-item:first-of-type {
+      border-top: 1px solid #eaeaea;
+    }
+
+    .faq-q {
+      font-weight: 490;
+      font-size: 1rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-a {
+      font-size: 0.93rem;
+      color: #4a4a4a;
+    }
+
+    .faq-a a {
+      color: #1e1e1e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #c0c0c0;
+    }
+
+    .faq-a a:hover {
+      text-decoration-color: #1e1e1e;
+    }
+
+    /* 资料脚注 */
+    .footnote {
+      margin-top: 3.6rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid #e8e8e8;
+      font-size: 0.82rem;
+      color: #7a7a7a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      body {
+        padding: 1.2rem 0.8rem 2rem;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .scene-card {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 导航 -->
+    <nav class="top-nav">
+      <span class="nav-brand">◈ 资料索引</span>
+      <div class="nav-links">
+        <a href="#">整理</a>
+        <a href="#">场景</a>
+        <a href="#">说明</a>
+      </div>
+    </nav>
+
+    <!-- hero 介绍 -->
+    <div class="hero">
+      <h1>信息整理 · 从索引到场景</h1>
+      <p>这一页更像是一份轻量的手册——把零散的内容归拢，按场景放置，方便回头翻阅。没有多余的装饰，只关心结构是否清晰。</p>
+    </div>
+
+    <!-- 核心介绍 -->
+    <section>
+      <h2>关于这个索引</h2>
+      <p class="sub-desc">你正在看的是一份围绕「NG体育」聚合的资料页。内容来源以公开信息与常规整理为主，侧重实用与条理，不追求面面俱到。</p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <section>
+      <h2>三个常见场景</h2>
+      <div class="scene-grid">
+        <div class="scene-card">
+          <div class="label">场景一</div>
+          <div class="title">信息归档与检索</div>
+          <p>把不同来源的资料按类别存放，便于后续查找。围绕 <a href="https://cnsite--ng.com" style="text-decoration: underline; text-underline-offset: 3px; color: #1e1e1e; text-decoration-color: #bbbbbb;">NG体育</a> 相关的介绍、动态与背景，都可以在这里找到整理过的条目。</p>
+        </div>
+        <div class="scene-card">
+          <div class="label">场景二</div>
+          <div class="title">快速概览与对比</div>
+          <p>当需要了解大致情况时，卡片式的摘要会比长文更省力。每个模块只保留关键差异或特征，适合初次浏览或横向参照。</p>
+        </div>
+        <div class="scene-card">
+          <div class="label">场景三</div>
+          <div class="title">常规问题参考</div>
+          <p>页面后半部分汇集了一些常见的疑问与说明，既不夸大也不简化，只是把信息摊开。若想深入了解，可以作为起点。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 常见说明 (FAQ 摘要) -->
+    <section class="faq-block">
+      <h2>常见说明</h2>
+      <div class="faq-item">
+        <div class="faq-q">这个页面与 NG体育 的关系？</div>
+        <div class="faq-a">它是一个独立的介绍与索引页，主要为了方便整理和分享相关内容。主体信息关联至 <a href="https://cnsite--ng.com">NG体育</a>，但页面本身属于资料汇编性质。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">内容多久更新一次？</div>
+        <div class="faq-a">没有固定周期。当公开资料发生变化或需要补充条目时，会做调整。当前版本侧重框架与结构，后续会逐步填充。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">信息可靠吗？</div>
+        <div class="faq-a">所有内容均取自可查的公开来源，不包含推测或未经证实的表述。如果你发现错误或遗漏，欢迎指出。</div>
+      </div>
+    </section>
+
+    <!-- 底部 -->
+    <div class="footnote">
+      <span>整理时间 · 2025</span>
+      <span>基于公开材料 · 仅作索引</span>
+    </div>
+  </div>
+</body>
+</html>
